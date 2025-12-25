@@ -43,7 +43,7 @@ The trained model can be used with the `dexi_yolo` ROS2 package.
 
 ```bash
 ros2 run dexi_yolo dexi_yolo_node_onnx.py --ros-args \
-  -p model_path:=/path/to/dexi_helipad_training/models/best.onnx \
+  -p model_path:=~/dexi_ws/src/dexi_helipad_training/models/best.onnx \
   -p class_names:=helipad
 ```
 
@@ -59,7 +59,7 @@ To use the helipad model instead of the default 6-class model, override paramete
 ```bash
 ros2 launch dexi_bringup dexi_bringup_ark_cm4.launch.py yolo:=true \
   --ros-args \
-  -p /dexi_yolo_node:model_path:=/path/to/dexi_helipad_training/models/best.onnx \
+  -p /dexi_yolo_node:model_path:=~/dexi_ws/src/dexi_helipad_training/models/best.onnx \
   -p /dexi_yolo_node:class_names:=helipad
 ```
 
